@@ -68,6 +68,7 @@ BO_ 514 POWERTRAIN_DATA: 8 XXX
  SG_ NEW_SIGNAL_2 : 56|8@1+ (1,0) [0|255] "" XXX
  SG_ VEHICLE_SPEED_KPH : 23|16@0+ (0.01,0) [0|1000] "kph" XXX
  SG_ THROTTLE : 39|16@0+ (0.002778,0) [0|100] "%" XXX
+ SG_ NEW_SIGNAL_1 : 48|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 134 NI3: 8 XXX
  SG_ NI3Counter : 23|16@0+ (1,0) [0|1] "" XXX
@@ -117,10 +118,12 @@ BO_ 154 LIGHTS: 8 XXX
 
 BO_ 1056 TEMPERATURE: 8 XXX
  SG_ COOLANT_TEMP : 0|8@1+ (1,0) [0|255] "" XXX
- SG_ CHARGING_SYSTEM_MALFUNCTION : 38|1@0+ (1,0) [0|1] "" XXX
- SG_ CHECK_FUEL_CAP : 40|1@0+ (1,0) [0|1] "" XXX
- SG_ LOW_ENGINE_OIL_PRESSURE : 43|1@0+ (1,0) [0|1] "" XXX
  SG_ OUTDOOR_TEMPERATURE : 63|8@0+ (0.25,0) [0|1] "cel" XXX
+ SG_ DISTANCE : 15|8@0+ (0.2,0) [0|51] "meter" XXX
+ SG_ FUEL_CONSUMPTION : 16|8@1+ (1,0) [0|255] "" XXX
+ SG_ CHECK_FUEL_CAP : 40|1@0+ (1,0) [0|1] "" XXX
+ SG_ CHARGING_SYSTEM_MALFUNCTION : 38|1@0+ (1,0) [0|1] "" XXX
+ SG_ LOW_ENGINE_OIL_PRESSURE : 43|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 1045 TRACTION: 8 XXX
  SG_ DSC_OFF : 3|1@0+ (1,0) [0|1] "" XXX
@@ -154,5 +157,9 @@ BO_ 1242 NEW_MSG_1: 8 XXX
 CM_ SG_ 357 GEAR_RELATED "Potentially more info embedded - these are the steady state levels which seem to correlate to gear state.";
 CM_ SG_ 154 LEFT_BLINKER "";
 CM_ SG_ 1056 COOLANT_TEMP "";
+CM_ SG_ 1056 DISTANCE "distance traveled. reset every 51 meters.";
+CM_ SG_ 1056 CHECK_FUEL_CAP "unverified";
+CM_ SG_ 1056 CHARGING_SYSTEM_MALFUNCTION "unverified";
+CM_ SG_ 1056 LOW_ENGINE_OIL_PRESSURE "unverified";
 CM_ SG_ 1045 ABS_MALFUNCTION "off: 0, solid: 1, slow blink: 2, fast blink: 3";
 CM_ SG_ 1045 TCS_DCS_MALFUNCTION "off: 0, solid: 1, slow blink: 2, fast blink: 3";
